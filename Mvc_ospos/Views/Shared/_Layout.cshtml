@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+
+
+
+    <link href="~/webfonts/all.min.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link href="~/Content/dataTable_v1.10.19.css" rel="stylesheet" />
+    <link href="~/Content/dataTables.bootstrap4.min.css" rel="stylesheet" />
+</head>
+<body>
+
+
+
+    <div class=" text-center topbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <iframe src="http://free.timeanddate.com/clock/i6izze74/n53/fcfff/tct/pct/ftb/tt0/tw1" frameborder="0" width="269" height="18" allowTransparency="true"></iframe>
+                </div>
+                <div class="col-md-4">
+                    <a href="index.php">smart sales</a>
+                </div>
+                <div class="col-md-4">
+                    <span>username</span> | <a href="#">logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+
+
+
+
+                <li class="nav-item ">
+                    <a class="nav-link menu-icon image-center" href="~/Home/Index" title="Home">
+                        <img src="~/images/cashups.png" title="Home">
+                        Home
+
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+
+
+                <li class="nav-item ">
+
+                    <a class="nav-link menu-icon image-center" href="~/Customer/Index" title="Customers">
+
+                        <img src="~/images/customers.png" title="Customers">
+                        Customers
+                    </a>
+                </li>
+
+                <li class="nav-item active">
+
+                    <a class="nav-link menu-icon image-center" href="#" title="Item">
+
+                        <img src="~/images/items.png" title="Item">
+                        Item
+                    </a>
+                </li>
+
+
+                <li class="nav-item ">
+
+                    <a class="nav-link menu-icon image-center" href="#" title="Suppliers">
+
+                        <img src="~/images/suppliers.png" title="Suppliers">
+                        Suppliers
+                    </a>
+                </li>
+
+                <li class="nav-item ">
+
+                    <a class="nav-link menu-icon image-center" href="#" title="Reports">
+
+                        <img src="~/images/reports.png" title="Reports">
+                        Reports
+                    </a>
+                </li>
+
+                <li class="nav-item ">
+
+                    <a class="nav-link menu-icon image-center" href="~/Sales/Index" title="Sales">
+
+                        <img src="~/images/sales.png" title="Sales">
+                        Sales
+                    </a>
+                </li>
+                <li class="nav-item ">
+
+                    <a class="nav-link menu-icon image-center" href="#" title="Purchases">
+
+                        <img src="~/images/receivings.png" title="Purchases">
+                        Purchases
+                    </a>
+                </li>
+
+                <li class="nav-item ">
+
+                    <a class="nav-link menu-icon image-center" href="expenses.php" title="Expenses">
+
+                        <img src="~/images/expenses.png" title="Expenses">
+                        Expenses
+                    </a>
+                </li>
+
+
+
+                <li class="nav-item ">
+
+                    <a class="nav-link menu-icon image-center" href="#" title="Dro list">
+
+                        <img src="~/images/item_kits.png" title="Expenses">
+                        Dro list
+                    </a>
+                </li>
+
+
+                <li class="nav-item ">
+
+                    <a class="nav-link menu-icon image-center" href="#" title="Expenses">
+
+                        <img src="~/images/employees.png" title="Expenses">
+                        Employees
+                    </a>
+                </li>
+
+                <li class="nav-item ">
+
+                    <a class="nav-link menu-icon image-center" href="#" title="Expenses">
+
+                        <img src="~/images/office.png" title="Expenses">
+                        Close Bank
+                    </a>
+                </li>
+
+
+                <li class="nav-item ">
+
+                    <a class="nav-link menu-icon image-center" href="#" title="System">
+
+                        <img src="~/images/config.png" title="System">
+                        System
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+
+
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>*@
+
+
+    <div class="container">
+
+
+
+
+
+        @RenderBody()
+
+
+
+
+
+
+        <br />
+        <br />
+        <footer class="fixed-bottom border  text-center bg-dark text-light pt-2 ">
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+
+    @Scripts.Render("~/bundles/jqueryval")
+
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/DataTables_v1.10.19.js"></script>
+
+    <script src="~/Scripts/DataTables_Bootstrap.js"></script>
+
+
+    @RenderSection("scripts", required: false)
+
+
+
+
+
+</body>
+</html>

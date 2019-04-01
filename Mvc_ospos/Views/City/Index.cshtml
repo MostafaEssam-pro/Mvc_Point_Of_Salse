@@ -1,0 +1,78 @@
+﻿
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_admin.cshtml";
+}
+
+
+<div class="container-fluid flex-grow-1 container-p-y">
+    <h4 class="font-weight-bold py-3 mb-0">Ecommerce</h4>
+    <div class="text-muted small mt-0 mb-4 d-block breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#"><i class="feather icon-home"></i></a></li>
+            <li class="breadcrumb-item ">Dashboard</li>
+            <li class="breadcrumb-item active">Ecommerce</li>
+        </ol>
+    </div>
+
+
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modelcity">
+        Add New City
+    </button>
+
+
+    <table id="example" class="table " style="width:100%">
+
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>First</th>
+                <th>Last</th>
+                <th>Action</th>
+
+            </tr>
+        </thead>
+        <tbody class="tbody"></tbody>
+    </table>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modelcity" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">City</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form id="cityform">
+                        <div class="form-group">
+                            <label>Ctiy Name</label>
+                            <input type="text" class="form-control" id="Namess"  placeholder="Enter your City name">
+                        </div>
+                        <div class="form-group">
+                            <label>government name</label>
+                            <select class="form-control form-control-lg" id="listitem"></select>
+                        </div>
+                    </form>
+
+
+
+                </div>
+                <div class="modal-footer">
+
+                    <button type="submit" class="btn btn-primary" id="btnAdd" onclick="Add();">Add</button>
+                    <button type="button" class="btn btn-primary"  style="display:none;" id="btnUpdate" onclick="Update();">Update</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>

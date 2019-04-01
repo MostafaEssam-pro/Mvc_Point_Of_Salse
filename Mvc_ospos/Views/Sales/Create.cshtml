@@ -1,0 +1,547 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<!--start container all page -->
+
+    <div class="row pb-5">
+
+
+        <div class="col-md-8 ">
+            <!--    start section invoice item-->
+
+
+
+            <div class="gray border rounded shadow">
+                <!--    start section header invoice item-->
+                
+                    <div class="row">
+
+
+
+
+
+
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label class="text-white">Brand</label>
+                                <div class="input-group input-group-sm">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fas fa-award"></i></span>
+                                    </div>
+                                    <select class="custom-select form-control" name="brand_item" id="brand_item" title="brand">
+                                        <option selected>Register Mode</option>
+                                        <option value="1">Purchases</option>
+                                        <option value="2">Return</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label class="text-white">Brand</label>
+                                <div class="input-group input-group-sm">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fas fa-award"></i></span>
+                                    </div>
+                                    <select class="custom-select form-control" name="brand_item" id="brand_item" title="brand">
+                                        <option selected>Register Mode</option>
+                                        <option value="1">Purchases</option>
+                                        <option value="2">Return</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-3 pt-4">
+                            <div class="input-group input-group-sm ">
+
+
+                                <a href="~/Sales/Index" class=" badge-info btn-sm border shadow rounded"> <i class="fas fa-shopping-cart text-dark pr-2"></i>Daily Sales </a>
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 pt-4">
+                            <div class="input-group input-group-sm  ">
+
+                                <button type="button" class="btn btn-info  btn-sm">
+                                    <i class="far fa-list pr-2"></i>Suspended
+
+                                </button>
+
+
+
+
+                            </div>
+                        </div>
+
+
+            
+
+                    </div>
+             
+            </div><!--    end section header invoice item-->
+
+
+
+
+            <div class="bg-gray-2 border  rounded">
+                <div class="col-md-12 pt-2">
+                    <div class="row">
+
+                        <div class="col-md-9">
+                            <form class="form-inline">
+
+                                <div class="input-group input-group-sm mb-2 col-md-12 ">
+                                    <label class="text-light pr-md-2">Fined item :</label>
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-search"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" id="item_search" name="item_search" placeholder="Start typing Item Name or scan Barcode..." title="Enter your phone">
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="col-md-3">
+
+                            <div class="input-group input-group-sm mb-1 col-md-12 mr-md-4">
+
+
+                                <a href="#" class="p-1 badge-info border shadow rounded btn-sm"><i class="fas fa-plus"></i> Add New Item </a>
+
+
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <table class="table table-hover table-sm" id="invoice">
+                <thead class="bg-gray  border rounded">
+                    <tr>
+                        <th style="width: 5%;">NO.</th>
+                        <th style="width: 10%;">Item #</th>
+                        <th style="width: 35%;">Item Name</th>
+                        <th style="width: 10%;">Price</th>
+                        <th style="width: 10%;">Quantity</th>
+                        <th style="width: 10%;">Disc %</th>
+                        <th style="width: 12%;">Total</th>
+                        <th style="width: 5%;">Delete</th>
+                    </tr>
+                </thead>
+
+                <tbody id="cart_contents  " class="rounded shadow border bg-gray-3">
+                    <form action="" class="form-horizontal" method="post" accept-charset="utf-8"></form>
+
+                    <tr>
+                        <td class="pt-3 pl-2">1</td>
+                        <td class="pt-3">10</td>
+                        <td style="align: center;">
+                            mm<br> [10 in stock]
+                            <input type="hidden" name="location" value="1">
+                        </td>
+
+                        <td>
+                            <input type="text" name="price" value="120.00" class="form-control input-sm mt-1" tabindex="2">
+                        </td>
+
+                        <td>
+                            <input type="text" name="quantity" value="1" class="form-control input-sm mt-1" tabindex="3">
+                        </td>
+
+                        <td>
+                            <input type="text" name="discount" value="0" class="form-control input-sm mt-1" tabindex="4">
+                        </td>
+                        <td class="pt-3">
+                            $120.00
+                        </td>
+
+                        <td><a href="#"><span class="fa fa-trash ml-md-3 pt-3 text-info"></span></a></td>
+
+
+
+
+
+
+
+
+
+                    <tr>
+                        <td class="pt-3 pl-2">2</td>
+                        <td class="pt-3">1025</td>
+                        <td style="align: center;">
+                            mostafa<br> [150 in stock]
+                            <input type="hidden" name="location" value="1">
+                        </td>
+
+                        <td>
+                            <input type="text" name="price" value="180.00" class="form-control input-sm mt-1" tabindex="2">
+                        </td>
+
+                        <td>
+                            <input type="text" name="quantity" value="1" class="form-control input-sm mt-1" tabindex="3">
+                        </td>
+
+                        <td>
+                            <input type="text" name="discount" value="0" class="form-control input-sm mt-1" tabindex="4">
+                        </td>
+                        <td class="pt-3">
+                            $120.00
+                        </td>
+
+                        <td><a href="#"><span class="fa fa-trash ml-md-3 pt-3 text-info"></span></a></td>
+
+
+
+
+
+
+
+
+
+                    <tr>
+                        <td class="pt-3 pl-2">1</td>
+                        <td class="pt-3">10</td>
+                        <td style="align: center;">
+                            mm<br> [10 in stock]
+                            <input type="hidden" name="location" value="1">
+                        </td>
+
+                        <td>
+                            <input type="text" name="price" value="120.00" class="form-control input-sm mt-1" tabindex="2">
+                        </td>
+
+                        <td>
+                            <input type="text" name="quantity" value="1" class="form-control input-sm mt-1" tabindex="3">
+                        </td>
+
+                        <td>
+                            <input type="text" name="discount" value="0" class="form-control input-sm mt-1" tabindex="4">
+                        </td>
+                        <td class="pt-3">
+                            $120.00
+                        </td>
+
+                        <td><a href="#"><span class="fa fa-trash ml-md-3 pt-3 text-info"></span></a></td>
+
+
+
+
+
+
+
+
+
+                </tbody>
+
+
+            </table>
+
+            <div class="p-3 bg-gray-2">
+                <div class="row">
+                    <div class="col-md-12">
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div><!--end section invoice item col-md-8-->
+
+
+        <div class="col-md-4 bg-gray-2 rounded border shadow">
+            <div class="row">
+                <div class="col-md-12">
+
+
+                    <h6 class="text-center p-2">Select Customer (Optional)</h6>
+
+                    <table class="table table-sm table-borderless " id="info_customer">
+                        <tbody>
+                            <tr>
+                                <th style="width: 55%;">Name</th>
+                                <th style="width: 45%; text-align: right;">Ddsa Dsadd</th>
+                            </tr>
+                            <tr>
+                                <th style="width: 55%;">Discount</th>
+                                <th style="width: 45%; text-align: right;">0.00 %</th>
+                            </tr>
+                            <tr>
+                                <th style="width: 55%;">Total</th>
+                                <th style="width: 45%; text-align: right;">$0.00</th>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <form c>
+
+                        <div class="row">
+
+
+                            <div class=" col-md-7">
+                                <div class="input-group input-group-sm  ">
+
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-search"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" id="search_Customer" name="search_Customer" placeholder="Search Customer" title="search_Customer">
+                                </div>
+
+                            </div>
+
+
+                            <div class=" col-md-5">
+                                <div class="input-group  input-group-sm ">
+
+                                    <a href="#" class="text-light bg-info border shadow rounded btn btn-sm "><i class="fas fa-user pr-1"></i>New Customer</a>
+
+                                </div>
+                                </div>
+                                
+                            </div>
+                            <div class="input-group input-group-sm mb-1 col-md-8 offset-md-4 ">
+
+                                <button type="button" class="btn btn-danger shadow   btn-sm ">
+                                    <i class="fas fa-user-times"></i> Remove Customer
+                                    <a href="customers.php"></a>
+                                </button>
+                            </div>
+
+</form>
+
+
+                    <table class="table table-borderless table-sm invoce border-top ">
+                        <tbody>
+                            <tr>
+                                <th style="width: 55%;">Quantity of 1 Items</th>
+                                <th style="width: 45%; text-align: right;">1</th>
+                            </tr>
+                            <tr>
+                                <th style="width: 55%;">Subtotal</th>
+                                <th style="width: 45%; text-align: right;">$120.00</th>
+                            </tr>
+
+
+                            <tr>
+                                <th style="width: 55%;">Total</th>
+                                <th style="width: 45%; text-align: right;"><span>$120.00</span></th>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table table-borderless table-sm invoce border-top">
+                        <tbody>
+                            <tr>
+                                <th style="width: 55%;">Payments Total</th>
+                                <th style="width: 45%; text-align: right;">$0.00</th>
+                            </tr>
+                            <tr>
+                                <th style="width: 55%;">Amount Due</th>
+                                <th style="width: 45%; text-align: right;"><span>$120.00</span></th>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                    <div class="bg-gray-4  border rounded shadow p-1">
+                        <form action="#" class="form-horizontal" method="post" accept-charset="utf-8">
+
+                            <table class="table table-borderless table-sm invoice border-top">
+                                <tbody>
+                                    <tr>
+                                        <td class="font-weight-bold ">Payment Type</td>
+                                        <td>
+                                            <div class="input-group input-group-sm mb-1  offset-md-3 col-md-9">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="fas fa-dollar-sign"></i>
+                                                </div>
+                                                <select class="custom-select form-control" id="inputGroupSelect01" aria-describedby="basic-addon1" title="Company type">
+                                                    <option selected>payment</option>
+                                                    <option value="1">Purchases</option>
+                                                    <option value="2">Return</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><span class="font-weight-bold">Amount Tendered</span></td>
+                                        <td>
+
+                                            <div class="input-group input-group-sm mb-2 offset-md-5 col-md-7">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="fas fa-dollar-sign"></i></span>
+                                                </div>
+                                                <input type="text" class="form-control" id="amount_invoice" name="amount_invoice" placeholder="L.E" title="sales">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                    <tr>
+                                        <td><span class="font-weight-bold">Tax</span></td>
+                                        <td>
+
+                                            <div class="input-group input-group-sm mb-2 offset-md-5 col-md-7">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="fas fa-dollar-sign"></i></span>
+                                                </div>
+                                                <input type="text" class="form-control" id="tax_invoice" name="tax_invoice" placeholder="L.E" value="0.00" title="tax">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr id="added_invoice_he">
+                                        <td><span class="font-weight-bold">Value Added </span></td>
+                                        <td>
+
+                                            <div class="input-group input-group-sm mb-2 offset-md-5 col-md-7">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="fas fa-dollar-sign"></i></span>
+                                                </div>
+                                                <input type="text" class="form-control" id="Added_invoice" name="Added_invoice" placeholder="L.E" value="0.00" title="Value Added ">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr id="delivery_invoice_he">
+                                        <td><span class="font-weight-bold">Delivery</span></td>
+                                        <td>
+
+                                            <div class="input-group input-group-sm mb-2 offset-md-5 col-md-7">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fas fa-dollar-sign"></i></span>
+                                                </div>
+                                                <input type="text" class="form-control" id="delivery_invoice" name="delivery_invoice" placeholder="L.E" value="0.00" title="invoice">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="input-group input-group-sm pb-2  ">
+
+                                        <button type="button" class="btn bg-info text-light btn-sm" id="tex_show">
+                                            <i class="fas fa-award pr-2 "></i>Tax
+
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="input-group input-group-sm ">
+
+                                        <button type="button" class="btn bg-info text-light btn-sm">
+                                            <i class="fab fa-cc-visa pr-2"></i> visa
+
+                                        </button>
+
+
+
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="input-group input-group-sm  ">
+
+                                        <button type="button" class="btn btn-info  btn-sm">
+                                            <i class="fas fa-credit-card "></i>  Add Payment
+
+                                        </button>
+
+
+
+
+                                    </div>
+                                    </div>
+
+
+                                </div>
+
+</form>
+
+                        <div class="bg-gray-3">
+
+                            <table class="table table-borderless table-sm  ">
+                                <thead class="bg-gray ">
+                                    <tr>
+                                        <th style="width: 20%;">Delete</th>
+                                        <th style="width: 60%;">Type</th>
+                                        <th style="width: 20%;">Amount</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td><a href="#"> <i class="fa fa-trash text-info pl-3"></i></a></td>
+                                        <td>Credit Card</td>
+                                        <td class="font-weight-bold ">$360.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+
+                    <div class="pt-1">
+
+                        <div class="row">
+
+                            <div class="input-group input-group-sm mb-1 col-md-4 offset-md-1  ">
+
+                                <button type="button" class="btn btn-primary  btn-sm">
+                                    <i class="far fa-check-circle pr-md-2"></i>Finish
+                                  
+                                </button>
+                            </div>
+
+                            <div class="input-group input-group-sm mb-1 col-md-3  offset-md-3 ">
+
+                                <button type="button" class="btn btn-danger  btn-sm">
+                                    <i class="fas fa-ban"></i> Cancel
+                                  
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div><!--end row all div page-->
+
