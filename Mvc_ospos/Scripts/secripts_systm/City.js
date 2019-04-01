@@ -4,6 +4,7 @@
 
 $(document).ready(function () {
     loadData();
+    Select();
 });
 
 
@@ -27,7 +28,7 @@ function loadData() {
                 html += '</tr>';
 
             });
-         
+
             $('.tbody').html(html);
         },
         error: function (errormessage) {
@@ -40,30 +41,26 @@ function loadData() {
 
 function Select() {
 
+    $.ajax({
+        type: "Get",
+        url: "http://localhost:51072/api/Government",
+        // contentType: "application/json; charset=utf-8",
+        dataType: 'json',
+        success: function (data) {
+            //console.log(data);
 
+            var items = '<option>--Select  City--</option>';
+            $.each(data, function (index, val) {
+                items += "<option value='" + val.id + "'>" + val.name + "</option>";
 
-
-
-$.ajax({
-    type: "Get",
-    url: "http://localhost:51072/api/Government",
-    // contentType: "application/json; charset=utf-8",
-    dataType: 'json',
-    success: function (data) {
-        //console.log(data);
-
-        var items = '<option>--Select  City--</option>';
-        $.each(data, function (index, val) {
-            items += "<option value='" + val.id + "'>" + val.name + "</option>";
-
-        });
-        //alert(items);
-        $('#listitem').html(items);
-    },
-    error: function (errormessage) {
-        alert(errormessage.responseText);
-    }
-});
+            });
+            //alert(items);
+            $('#listitem').html(items);
+        },
+        error: function (errormessage) {
+            alert(errormessage.responseText);
+        }
+    });
 
 }
 
@@ -79,11 +76,6 @@ function Add() {
         type: "POST",
         url: "http://localhost:51072/api/city",
         data: pro,
-        //{
-            //Name: $('#Namess').val(),
-            //Governments_Id: $('#listitem').val()
-            
-        //},
         dataType: "json",
         success: function (data) {
             console.log("dsadsa " + data);
@@ -95,9 +87,9 @@ function Add() {
         error: function (errormessage) {
             console.log("hiiiiiiii");
             alert(errormessage.responseText);
-             
+
         }
-           
+
 
     });
 }
@@ -111,9 +103,6 @@ function getCityById(gid) {
         success: function (result) {
             Select();
             $('#Namess').val(result.name);
-
-           
-           
             console.log(result.gover);
             $('#modelcity').modal('show');
             $('#btnUpdate').show();
@@ -125,5 +114,25 @@ function getCityById(gid) {
             }
     });
     return false;
+}
+
+
+
+function Update() {
+
+    var pro_update = new Object();
+
+    pro_update.Name = $('#Namess').val();
+    pro_update.Governments_Id = $('#listitem').val();
+
+    $.ajax({
+        url: "http://localhost:51072/api/city/",
+        type: "Put",
+        dataType: "json",
+        success: function (done) {
+
+        }
+
+    });
 }
 
