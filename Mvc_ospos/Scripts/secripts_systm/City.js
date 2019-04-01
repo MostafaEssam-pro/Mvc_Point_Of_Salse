@@ -103,6 +103,7 @@ function getCityById(gid) {
         success: function (result) {
             Select();
             $('#Namess').val(result.name);
+            $('#id').val(result.id);
             console.log(result.gover);
             $('#modelcity').modal('show');
             $('#btnUpdate').show();
@@ -120,16 +121,25 @@ function getCityById(gid) {
 
 function Update() {
 
-    var pro_update = new Object();
-
-    pro_update.Name = $('#Namess').val();
-    pro_update.Governments_Id = $('#listitem').val();
-
+    var proupdate = new Object();
+    proupdate.id = $("#id").val();
+    proupdate.Name = $('#Namess').val();
+    proupdate.Governments_Id = $('#listitem').val();
+  
     $.ajax({
-        url: "http://localhost:51072/api/city/",
         type: "Put",
+        url: "http://localhost:51072/api/city",
+        data: proupdate,
         dataType: "json",
-        success: function (done) {
+        success: function (proupdate) {
+            console.log(proupdate);
+            loadData();
+            $('#modelcity').modal('hide');
+            $("#Namess").val("");
+            $("#listitem").val("");
+        },
+        error: function (errormessage) {
+            alert(errormessage.responseText);
 
         }
 
