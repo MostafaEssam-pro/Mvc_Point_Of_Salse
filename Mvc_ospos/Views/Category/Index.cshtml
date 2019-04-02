@@ -1,75 +1,76 @@
-﻿@model IEnumerable < Mvc_ospos.Models.Category>
+﻿
 
 
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_admin.cshtml";
+
 }
 
+<div class="container-fluid flex-grow-1 container-p-y">
+    <h4 class="font-weight-bold py-3 mb-0">Ecommerce</h4>
+    <div class="text-muted small mt-0 mb-4 d-block breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#"><i class="feather icon-home"></i></a></li>
+            <li class="breadcrumb-item ">Dashboard</li>
+            <li class="breadcrumb-item active">Ecommerce</li>
+        </ol>
+    </div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table id="Areas" class="table  table-bordered table-hover " style="width:100%">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
 
-    <tbody>
-        @foreach (var item in Model)
-        {
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Category_Modal">
+        Add New Category
+    </button>
+
+
+    <table id="TableCategory" class="table " style="width:100%">
+
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-                </td>
+                <th>Id</th>
+                <th>Category</th>
+                <th>Action</th>
+
             </tr>
-            
-        }
-        </tbody>
-</table>
+        </thead>
+        <tbody class="tbody_Category"></tbody>
+    </table>
+
+    <!-- Modal -->
+    <div class="modal fade" id="Category_Modal" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Category Name</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="cityform">
+                        <div class="form-group">
+                            <label>Ctiy Name</label>
+                            <input type="text" class="form-control" id="Namess" placeholder="Enter your Category ">
+                        </div>
+
+                    </form>
 
 
 
+                </div>
+                <div class="modal-footer">
 
-@section Scripts{
+                    <button type="submit" class="btn btn-primary" id="btnAdd" onclick="Add();">Add</button>
+                    <button type="button" class="btn btn-primary" style="display:none;" id="btnUpdate" onclick="return Update();">Update</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <script>
-
-        $(document).ready(function () {
-            $('#Areas').DataTable(
-
-
-                {
-
-                    "language": {
-
-                        "lengthMenu": "عرض _MENU_ الصفحه",
-                        "zeroRecords": "لايوجد بيانات",
-                        "info": "عدد الصفحات _PAGE_ من _PAGES_",
-                        "infoEmpty": "لايوجد صفحات",
-                        "infoFiltered": "(تم البحث _MAX_ في جميع السطور)",
-                        "paginate": {
-                            "previous": "السابقه",
-                            "next": "التاليه",
-
-                        }
-
-                    }
-                }
-
-            )
-
-        });
-    </script>
-
-}
-
+</div>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/secripts_systm/City.js"></script>
