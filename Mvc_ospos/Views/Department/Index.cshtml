@@ -5,5 +5,93 @@
     Layout = "~/Views/Shared/_Layout_admin.cshtml";
 }
 
-<h2>Index</h2>
+<div class="container-fluid flex-grow-1 container-p-y">
+    <div class="text-muted small mt-0 mb-4 d-block breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="Home/Index"><i class="feather icon-home"></i></a></li>
+            <li class="breadcrumb-item ">Home<a href="Home/Index" title="Home"></a></li>
+            <li class="breadcrumb-item active">Department</li>
+        </ol>
+    </div>
 
+
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modals_Department">
+        Add New Department
+    </button>
+
+
+    <table id="TableCategory" class="table " style="width:100%">
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Department</th>
+                <th>Action</th>
+              
+
+            </tr>
+        </thead>
+        <tbody class="tbody_Department"></tbody>
+    </table>
+
+    <!-- Modal template -->
+
+    <div class="modal  fade" id="modals_Department" tabindex="-1">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Department Information</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="Department_Form">
+             
+
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <label class="form-label"> Department Name</label>
+                                <input type="text" class="form-control" id="Name" name="Name" placeholder="Entry Name Department " required>
+                                <div class="clearfix"></div>
+                            </div>
+
+
+                        </div>
+
+                    </form>
+
+
+
+                </div>
+                <div class="modal-footer">
+
+                    <button type="submit" class="btn btn-primary" id="btnAdd" onclick="return Add();">Add</button>
+                    <button type="button" class="btn btn-primary" style="display:none;" id="btnUpdate" onclick="Update();">Update</button>
+                    <button type="button" class="btn btn-secondary" onclick="return Close();" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/secripts_systm/Department.js"></script>

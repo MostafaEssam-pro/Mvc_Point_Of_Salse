@@ -1,12 +1,8 @@
 ﻿
-
-
-
 $(document).ready(function () {
     loadData();
     Select();
 });
-
 
 
 
@@ -64,9 +60,6 @@ function Select() {
 
 }
 
-
-
-
 function Add() {
 
     var pro = new Object();
@@ -78,14 +71,11 @@ function Add() {
         data: pro,
         dataType: "json",
         success: function (data) {
-            console.log("dsadsa " + data);
             $('#modelcity').modal("hide");
             loadData();
-
-            console.log("mostafa");
+            clearTextBox();
         },
         error: function (errormessage) {
-            console.log("hiiiiiiii");
             alert(errormessage.responseText);
 
         }
@@ -94,16 +84,17 @@ function Add() {
     });
 }
 
-
 function getCityById(gid) {
     $.ajax({
         url: "http://localhost:51072/api/city/" + gid,
         type: "GET",
         dataType: "json",
         success: function (result) {
-            Select();
-            $('#Namess').val(result.name);
+           
             $('#id').val(result.id);
+            $('#Namess').val(result.name);
+            $("#listitem").val(result.gover);
+         
             console.log(result.gover);
             $('#modelcity').modal('show');
             $('#btnUpdate').show();
@@ -117,26 +108,22 @@ function getCityById(gid) {
     return false;
 }
 
-
-
 function Update() {
 
     var proupdate = new Object();
     proupdate.id = $("#id").val();
     proupdate.Name = $('#Namess').val();
     proupdate.Governments_Id = $('#listitem').val();
-  
     $.ajax({
-        type: "Put",
+        
         url: "http://localhost:51072/api/city",
-        data: proupdate,
+        type: "PUT",
+        data: JSON.stringify(proupdate),
         dataType: "json",
         success: function (proupdate) {
-            console.log(proupdate);
             loadData();
             $('#modelcity').modal('hide');
-            $("#Namess").val("");
-            $("#listitem").val("");
+            clearTextBox();
         },
         error: function (errormessage) {
             alert(errormessage.responseText);
@@ -146,3 +133,16 @@ function Update() {
     });
 }
 
+
+function clearTextBox() {
+    $('#Namess ').val("");
+    $("#listitem").val($("#listitem option:first").val());
+    $('#btnUpdate').hide();
+    $('#btnAdd').show();
+
+}
+
+function Close() {
+
+    clearTextBox();
+}

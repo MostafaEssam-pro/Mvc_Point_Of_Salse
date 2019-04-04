@@ -188,6 +188,7 @@
     <Content Include="Content\images\sort_both.png" />
     <Content Include="Content\images\sort_desc.png" />
     <Content Include="Content\images\sort_desc_disabled.png" />
+    <Content Include="Content\Style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\feather.css" />
     <Content Include="fonts\feather\feather6cfa.svg" />
@@ -232,7 +233,10 @@
     <Content Include="Scripts\popper.js" />
     <Content Include="Scripts\raphael.js" />
     <Content Include="Scripts\secripts_systm\City.js" />
+    <Content Include="Scripts\secripts_systm\Department.js" />
+    <Content Include="Scripts\secripts_systm\Item.js" />
     <Content Include="Scripts\sidenav.js" />
+    <Content Include="Scripts\secripts_systm\Catgegory.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -253,12 +257,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Customer\Create.cshtml" />
-    <Content Include="Views\Item\Index.cshtml" />
-    <Content Include="Views\Item\Create.cshtml" />
     <Content Include="Views\Sales\Index.cshtml" />
     <Content Include="Views\Sales\Create.cshtml" />
     <Content Include="Views\Category\Index.cshtml" />
-    <Content Include="Views\Category\Create.cshtml" />
     <Content Include="Views\Government\Create.cshtml" />
     <Content Include="Views\Government\Index.cshtml" />
     <Content Include="Views\Shared\_Layout_admin.cshtml" />
@@ -311,6 +312,7 @@
     <Content Include="fonts\pe-icon-7-stroke\Pe-icon-7-strokebb1d.woff" />
     <Content Include="fonts\pe-icon-7-stroke\Pe-icon-7-stroked41d.eot" />
     <None Include="packages.config" />
+    <Content Include="Views\Item\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

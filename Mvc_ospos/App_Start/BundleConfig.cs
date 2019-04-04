@@ -8,9 +8,12 @@ namespace Mvc_ospos
         // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/pace.js",
                         "~/Scripts/jquery-3.3.1.min.js",
+                        "~/Scripts/jquery-1.10.2.min.js",
                         "~/Scripts/popper.js",
                         "~/Scripts/jquery.dataTables.min.js",
                       "~/Scripts/dataTables.bootstrap4.min.js" 

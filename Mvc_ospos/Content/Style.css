@@ -1,0 +1,13 @@
+﻿.table thead th {
+    border-bottom: 2px solid #000000;
+}
+
+
+.table th, .table td {
+
+        border-bottom: 2px solid #000000;
+}
+
+body{
+    text-transform:capitalize;
+}

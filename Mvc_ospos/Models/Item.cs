@@ -19,6 +19,10 @@ namespace Mvc_ospos.Models
         public virtual Category Categorys { get; set; }
 
 
-        public List<Order_Details> Order_Detailss { get; set; }
+        [ForeignKey("Suppliers")]
+        public virtual int Suppliers_Id { get; set; }
+        public virtual Supplier Suppliers { get; set; }
+
+        public virtual List<Order_Details> Order_Detailss { get; set; }
     }
 }
