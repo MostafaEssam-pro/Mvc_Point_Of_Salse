@@ -1,6 +1,11 @@
 ﻿$(document).ready(function () {
+    jQuery.support.cors = true;
+
+ 
     LodadDate_Category();
 });
+
+
 
 
 
@@ -14,6 +19,7 @@ function LodadDate_Category() {
         type: "GET",
         dataType: "json",
         url: "http://localhost:51072/api/Category",
+      
         success: function (data) {
             var html = '';
             console.log(data);
@@ -92,6 +98,10 @@ function Update() {
         dataType: "json",
         data: JSON.stringify(UpdaCag),
         url: "http://localhost:51072/api/Category/",
+        crossDomain: true,
+        xhrFields: {
+            withCredentials: true
+        },
         success: function (Result) {
             LodadDate_Category();
             $("#Category_Modal").modal("hide");
@@ -118,7 +128,7 @@ function Delele(ID) {
             type: "DELETE",
             dataType: "json",
             success: function (result) {
-                loadData();
+                LodadDate_Category();
             },
             error: function (errormessage) {
                 alert(errormessage.responseText);

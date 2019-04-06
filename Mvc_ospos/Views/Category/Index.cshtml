@@ -49,13 +49,14 @@
         </button>
         </div>
         <div class="modal-body">
-        <form id="Category_Form">
-        <div class="form-group">
-        <label>Category Name</label>
-        <input type="text" class="form-control" id="Category_Name" title="Category" name="Category_Name" placeholder="Enter your Category " required>
-        </div>
+            <form id="Category_Form">
+                @Html.AntiForgeryToken();
+                <div class="form-group">
+                    <label>Category Name</label>
+                    <input type="text" class="form-control" id="Category_Name" title="Category" name="Category_Name" placeholder="Enter your Category " required>
+                </div>
 
-        </form>
+            </form>
 
 
 
