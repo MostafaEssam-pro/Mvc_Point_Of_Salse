@@ -28,6 +28,12 @@ namespace Mvc_ospos.Models
         public int Shifts_Id { get; set; }
         public Shift Shifts { get; set; }
 
+
+
+        [ForeignKey("Citys")]
+        public int Citys_Id { get; set; }
+        public City Citys { get; set; }
+
         public List<Order> Orders { get; set; }
     }
 }

@@ -1,4 +1,8 @@
-﻿$(document).ready(function () {
+﻿
+
+
+
+$(document).ready(function () {
     jQuery.support.cors = true;
 
  
@@ -13,7 +17,7 @@
 //----------------------------------------Start Category-------------------------
 
 
-function LodadDate_Category() {
+function LodadDate_Category(){
 
     $.ajax({
         type: "GET",

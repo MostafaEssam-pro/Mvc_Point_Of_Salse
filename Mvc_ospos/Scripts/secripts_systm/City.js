@@ -94,8 +94,6 @@ function getCityById(gid) {
             $('#id').val(result.id);
             $('#Namess').val(result.name);
             $("#listitem").val(result.gover);
-         
-            console.log(result.gover);
             $('#modelcity').modal('show');
             $('#btnUpdate').show();
             $('#btnAdd').hide();
@@ -117,9 +115,13 @@ function Update() {
     $.ajax({
         
         url: "http://localhost:51072/api/city",
-        type: "PUT",
+    
         data: JSON.stringify(proupdate),
-        dataType: "json",
+        
+        headers: {
+            "Content-Type": "application/json",
+            "X-HTTP-Method-Override": "PUT"
+        },
         success: function (proupdate) {
             loadData();
             $('#modelcity').modal('hide');
@@ -131,6 +133,26 @@ function Update() {
         }
 
     });
+}
+
+
+
+
+function Delele(ID) {
+    var ans = confirm("Are you sure you want to delete this Record?");
+    if (ans) {
+        $.ajax({
+            url: "http://localhost:51072/api/city/" + ID,
+            type: "DELETE",
+            dataType: "json",
+            success: function (result) {
+                loadData();
+            },
+            error: function (errormessage) {
+                alert(errormessage.responseText);
+            }
+        });
+    }
 }
 
 

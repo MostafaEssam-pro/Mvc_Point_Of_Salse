@@ -210,6 +210,7 @@
     <Content Include="images\admin\6-small.png" />
     <Content Include="images\admin\logo\logo-dark.png" />
     <Content Include="images\admin\logo\logo.png" />
+    <Content Include="Scripts\1.11.1jquery-ajax.js" />
     <Content Include="Scripts\analytics.js" />
     <Content Include="Scripts\animated.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -223,6 +224,7 @@
     <Content Include="Scripts\flot.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-migrate-1.1.0.js" />
     <Content Include="Scripts\jquery.dataTables.min.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\layout-helpers.js" />
@@ -234,6 +236,7 @@
     <Content Include="Scripts\raphael.js" />
     <Content Include="Scripts\secripts_systm\City.js" />
     <Content Include="Scripts\secripts_systm\Department.js" />
+    <Content Include="Scripts\secripts_systm\Employee.js" />
     <Content Include="Scripts\secripts_systm\Item.js" />
     <Content Include="Scripts\sidenav.js" />
     <Content Include="Scripts\secripts_systm\Catgegory.js" />
@@ -259,7 +262,6 @@
     <Content Include="Views\Customer\Create.cshtml" />
     <Content Include="Views\Sales\Index.cshtml" />
     <Content Include="Views\Category\Index.cshtml" />
-    <Content Include="Views\Government\Create.cshtml" />
     <Content Include="Views\Government\Index.cshtml" />
     <Content Include="Views\Shared\_Layout_admin.cshtml" />
     <Content Include="Views\Department\Index.cshtml" />
@@ -267,7 +269,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Employee\" />
     <Folder Include="Views\Order\" />
     <Folder Include="Views\Order_Details\" />
     <Folder Include="Views\Shift\" />
@@ -312,6 +313,7 @@
     <Content Include="fonts\pe-icon-7-stroke\Pe-icon-7-stroked41d.eot" />
     <None Include="packages.config" />
     <Content Include="Views\Item\Index.cshtml" />
+    <Content Include="Views\Employee\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

@@ -1,0 +1,127 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_admin.cshtml";
+}
+
+
+
+<div class="container-fluid flex-grow-1 container-p-y">
+    <div class="text-muted small mt-0 mb-4 d-block breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="Home/Index"><i class="feather icon-home"></i></a></li>
+            <li class="breadcrumb-item ">Home<a href="Home/Index" title="Home"></a></li>
+            <li class="breadcrumb-item active">Employee</li>
+        </ol>
+    </div>
+
+
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modals_Employee">
+        Add New Employee
+    </button>
+
+
+    <table id="TableEmployee" class="table " style="width:100%">
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name item</th>
+                <th>Stock</th>
+                <th>Category</th>
+                <th>Suppliers</th>
+                <th>Action</th>
+
+            </tr>
+        </thead>
+        <tbody class="tbody_Employee"></tbody>
+    </table>
+
+    <!-- Modal template -->
+
+    <div class="modal modal-top fade" id="modals_Employee" tabindex="-1">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Employee Information</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="item_Form">
+
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <label class="form-label"> Items name</label>
+                                <input type="text" class="form-control" id="Name_item" name="Name_item" placeholder="Entry Name Item ">
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="form-group col-3 mb-0">
+                                <label class="form-label">Category</label>
+                                <select class="form-control" name="Categorys_Id" id="Categorys_Id"></select>
+
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="form-group col-3 mb-0">
+                                <label class="form-label">Suppliers</label>
+                                <select class="form-control" name="Suppliers_Id" id="Suppliers_Id"></select>
+
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col mb-0">
+                                <label class="form-label">Barcode </label>
+                                <input type="number" class="form-control" id="Barcode" name="Barcode" placeholder=" ||||||||||||| ">
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <div class="form-group col mb-0">
+                                <label class="form-label">Stock_Type</label>
+                                <select id="Stock_Type" name="Stock_Type" class="form-control">
+                                    <option value="0">---Select Type---</option>
+                                    <option value="new">new</option>
+                                    <option value="old">old</option>
+                                </select>
+                                <div class="clearfix"></div>
+                            </div>
+
+
+                        </div>
+                    </form>
+
+
+
+                </div>
+                <div class="modal-footer">
+
+                    <button type="submit" class="btn btn-primary" id="btnAdd" onclick="return Add();">Add</button>
+                    <button type="button" class="btn btn-primary" style="display:none;" id="btnUpdate" onclick="Update();">Update</button>
+                    <button type="button" class="btn btn-secondary" onclick="return Close();" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/popper.js"></script>
+<script src="~/Scripts/1.11.1jquery-ajax.js"></script>
+<script src="~/Scripts/jquery-migrate-1.1.0.js"></script>
+<script src="~/Scripts/secripts_systm/Employee.js"></script>
